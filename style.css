@@ -1,0 +1,92 @@
+header > h1 {
+	margin: 20px 0px 10px 10px;
+}
+
+table {
+	border-collapse: collapse;
+	border: 1px solid;
+	margin-left: 10px;
+}
+
+th {
+	padding: 3px 15px 3px 15px;
+}
+
+tr {
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+}
+
+td {
+	border: 1px solid;
+	text-align: center;
+	padding: 3px;
+}
+
+img {
+	width: 150px;
+	margin: auto;
+}
+
+.testBorder {
+	border: 1px solid red;
+}
+
+#arena {
+	width: 85%;
+	margin: 20px auto 20px auto;
+	border: 1px solid;
+}
+
+#line {
+	border-top: 1px solid;
+}
+
+#cpuSpace,
+#playerSpace {
+	width: 155px;
+	margin: 10px auto 10px auto;
+}
+
+#cpuSpace > p,
+#playerSpace > p {
+	text-align: center;
+	margin: auto;
+}
+
+#cpuPlay,
+#playerPlay {
+	font-weight: bold;
+}
+
+#selectionBox {
+	width: 85%;
+	margin: 10px auto 10px auto;
+	display: flex;
+	justify-content: center;
+	border: 1px solid;
+}
+
+.selectionIMGs {
+	display: inline-flex;
+	margin: 10px;
+}
+
+.selectionIMGs img {
+	width: 60px;
+	display: block;
+	margin-bottom: 6px;
+}
+
+.btnContainer {
+	display: flex;
+	margin: 0px 15px 0px 15px;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.btnContainer button {
+	display: block;
+	width: 76px;
+	height: 76px;
+}

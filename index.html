@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel=stylesheet type=text/css href="style.css">
-	<script src="script.js" async defer></script>
-</head>
-<body>
-	
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel=stylesheet type=text/css href="style.css">
+		<script src="script.js" async defer></script>
+		<script src="listeners.js" async defer></script>
+	</head>
+	<body>
+		<header>
+			<h1>Player Score</h1>
+			<table>
+				<tr>
+					<th>Player Wins</th>
+					<th>Player Losses</th>
+					<th>Win:Loss Ratio</th>
+				</tr>
+				<tr>
+					<td id="win">5</td>
+					<td id="loss">3</td>
+					<td id="ratio">1.66</td>
+				</tr>
+			</table>
+		</header>
+
+		<div id="arena">
+			<div id="cpuSpace">
+				<p>Computer plays: <span id="cpuPlay">Rock!</span></p>
+				<img src="assets\images\rock.svg" />
+			</div>
+			<div id="line"></div>
+			<div id="playerSpace">
+				<img src="assets\images\paper.svg" />
+				<p>Player plays: <span id="playerPlay">Paper!</span></p>
+			</div>
+		</div>
+
+		<div id="selectionBox">
+			<div class="selectionIMGs">
+				<div class="btnContainer">
+					<img src="assets\images\rock.svg" />
+					<button type="button" id="selectRock" value="1;">
+						Rock
+					</button>
+				</div>
+				<div class="btnContainer">
+					<img src="assets\images\paper.svg" />
+					<button type="button" id="selectPaper" value="0;">
+						Paper
+					</button>
+				</div>
+				<div class="btnContainer">
+					<img src="assets\images\scissors.svg" />
+					<button type="button" id="selectScissors" value="-1">
+						Scissors
+					</button>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
