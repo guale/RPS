@@ -13,6 +13,10 @@ class Play {
 let player = new Play();
 let cpu = new Play();
 
+function randInt(max, min) {
+	return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 //assigns values to the player object based on the player's selection
 
 function playerInput(value) {
@@ -39,7 +43,7 @@ function playerInput(value) {
 //generates a random selection for the cpu and assigns values to the cpu object
 
 function cpuInput() {
-	cpu.input = Math.floor(Math.random() * 3 - 1);
+	cpu.input = randInt(1,-1);
 
 	switch (cpu.input) {
 		case 1:
