@@ -10,6 +10,7 @@
 		<script src="listeners.js" async defer></script>
 	</head>
 	<body>
+		<!-- displays the player's score after each match -->
 		<header>
 			<h1>Player Score</h1>
 			<table>
@@ -19,43 +20,42 @@
 					<th>Win:Loss Ratio</th>
 				</tr>
 				<tr>
-					<td id="win">5</td>
-					<td id="loss">3</td>
-					<td id="ratio">1.66</td>
+					<td id="win">0</td>
+					<td id="loss">0</td>
+					<td id="ratio">0</td>
 				</tr>
 			</table>
 		</header>
 
+		<!-- shows which move the player and computer each made  -->
 		<div id="arena">
 			<div id="cpuSpace">
-				<p>Computer plays: <span id="cpuPlay">Rock!</span></p>
-				<img src="assets\images\rock.svg" />
+				<p>Computer plays: <span id="cpuPlay"></span></p>
+				<img src="assets\images\blank.svg" />
 			</div>
 			<div id="line"></div>
 			<div id="playerSpace">
-				<img src="assets\images\paper.svg" />
-				<p>Player plays: <span id="playerPlay">Paper!</span></p>
+				<img src="assets\images\blank.svg" />
+				<p>Player plays: <span id="playerPlay"></span></p>
 			</div>
 		</div>
 
+		<!-- has buttons for the player to chose their move -->
 		<div id="selectionBox">
 			<div class="selectionIMGs">
 				<div class="btnContainer">
-					<img src="assets\images\rock.svg" />
-					<button type="button" id="selectRock" value="1;">
-						Rock
+					<button type="button" id="selectRock" value="1">
+						<img src="assets\images\rock.svg" />
 					</button>
 				</div>
 				<div class="btnContainer">
-					<img src="assets\images\paper.svg" />
-					<button type="button" id="selectPaper" value="0;">
-						Paper
+					<button type="button" id="selectPaper" value="0">
+						<img src="assets\images\paper.svg" />
 					</button>
 				</div>
 				<div class="btnContainer">
-					<img src="assets\images\scissors.svg" />
 					<button type="button" id="selectScissors" value="-1">
-						Scissors
+						<img src="assets\images\scissors.svg" />
 					</button>
 				</div>
 			</div>
