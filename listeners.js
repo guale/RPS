@@ -19,6 +19,11 @@ let button = {
 	scissors: document.querySelector("#selectScissors"),
 };
 
+//Responds to button clicks and executes functions to assign the correct value for the player's selection
+button.rock.addEventListener("click", pressTheButton);
+button.paper.addEventListener("click", pressTheButton);
+button.scissors.addEventListener("click", pressTheButton);
+
 //Responds to button touches and executes functions to assign the correct value for the player's selection
 button.rock.addEventListener("touchstart", pressTheButton);
 button.paper.addEventListener("touchstart", pressTheButton);
