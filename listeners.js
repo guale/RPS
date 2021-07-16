@@ -25,9 +25,9 @@ button.paper.addEventListener("click", pressTheButton);
 button.scissors.addEventListener("click", pressTheButton);
 
 //Responds to button touches and executes functions to assign the correct value for the player's selection
-button.rock.addEventListener("touchstart", pressTheButton);
-button.paper.addEventListener("touchstart", pressTheButton);
-button.scissors.addEventListener("touchstart", pressTheButton);
+// button.rock.addEventListener("touchstart", pressTheButton);
+// button.paper.addEventListener("touchstart", pressTheButton);
+// button.scissors.addEventListener("touchstart", pressTheButton);
 
 function pressTheButton() {
 	value = this.value;
