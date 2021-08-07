@@ -1,20 +1,11 @@
-header > h1 {
-	margin: 20px 10px 10px 10px;
-}
-
 table {
 	border-collapse: collapse;
 	border: 1px solid;
-	margin-left: 10px;
+	margin: 0px 10px;
 }
 
 th {
 	padding: 3px 15px 3px 15px;
-}
-
-tr {
-	border-top: 1px solid;
-	border-bottom: 1px solid;
 }
 
 td {
@@ -23,13 +14,19 @@ td {
 	padding: 3px;
 }
 
-img {
-	width: 150px;
-	margin: auto;
-}
-
 .testBorder {
 	border: 1px solid red;
+}
+
+#boundaryBox{
+	width: 100%;
+	max-width:800px;
+	margin:auto;
+}
+
+#scoreTitle {
+	margin: 20px 10px 10px 10px;
+	font-size: min(6vw, 36px);
 }
 
 #arena {
@@ -39,20 +36,29 @@ img {
 	border: 1px solid;
 }
 
+#arena img {
+	width: auto;
+	max-width: 150px;
+}
+
 #line {
 	border-top: 1px solid;
 }
 
 #cpuSpace,
 #playerSpace {
-	width: 155px;
+	width: 40%;
+	max-width: 155px;
 	margin: 10px auto 10px auto;
+	display: flex;
+	flex-direction: column;
 }
 
 #cpuSpace > p,
 #playerSpace > p {
 	text-align: center;
-	margin: auto;
+	margin: 0px;
+	font-size: auto;
 }
 
 #cpuPlay,
@@ -69,25 +75,12 @@ img {
 	border: 1px solid;
 }
 
-.selectionIMGs {
-	display: inline-flex;
-	margin: 10px;
-}
-
-.selectionIMGs img {
-	width: 60px;
-	display: block;
-}
-
-.btnContainer {
-	display: flex;
-	margin: 0px 15px 0px 15px;
-	justify-content: center;
-	flex-direction: column;
-}
-
-.btnContainer button {
-	display: block;
-	width: 76px;
-	height: 76px;
+#selectionBox input {
+	box-sizing: border-box;
+	width: 20%;
+	max-width: 76px;
+	padding: 6px;
+	margin: 10px 15px;
+	border: solid 1px grey;
+	border-radius: 2px;
 }

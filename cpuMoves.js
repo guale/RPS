@@ -21,7 +21,7 @@ function cpuInput() {
 
 	else {
 		cpuRandom();
-		console.log("Something went wrong");
+		alert("Error 100");
 	}
 
 	switch (cpu.input) {
@@ -53,7 +53,6 @@ function cpuWinResponse() {
 			cpu.input = -1;
 			break;
 	}
-	console.log("win");
 }
 
 //If a human player won previously they are most likely to repeat their move, so the computer chooses the move that would beat the player's last move
@@ -69,11 +68,9 @@ function cpuLossResponse() {
 			cpu.input = 1;
 			break;
 	}
-	console.log("loss");
 }
 
 //returns a random value for the computer's move
 function cpuRandom() {
 	cpu.input = randInt(1, -1);
-	console.log("random");
 }

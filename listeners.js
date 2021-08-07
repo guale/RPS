@@ -12,22 +12,21 @@ let win = document.querySelector("#win");
 let loss = document.querySelector("#loss");
 let ratio = document.querySelector("#ratio");
 
-//Defines the buttons on the page
-let button = {
-	rock: document.querySelector("#selectRock"),
-	paper: document.querySelector("#selectPaper"),
-	scissors: document.querySelector("#selectScissors"),
-};
+let buttons = document.querySelector("#selectionBox");
 
 //Responds to button clicks and executes functions to assign the correct value for the player's selection
-button.rock.addEventListener("click", pressTheButton);
-button.paper.addEventListener("click", pressTheButton);
-button.scissors.addEventListener("click", pressTheButton);
+
+buttons.addEventListener("click", (event) => {
+	if (event.target.matches("input")) {
+		value = event.target.value;
+		playerInput(value);
+		cpuInput();
+		determineWinner();
+		display();
+	}
+});
 
 //Responds to button touches and executes functions to assign the correct value for the player's selection
-// button.rock.addEventListener("touchstart", pressTheButton);
-// button.paper.addEventListener("touchstart", pressTheButton);
-// button.scissors.addEventListener("touchstart", pressTheButton);
 
 function pressTheButton() {
 	value = this.value;
@@ -49,6 +48,7 @@ document.querySelector("body").addEventListener("keydown", (event) => {
 	) {
 		playerWins += 99;
 		win.innerText = playerWins;
+		if (playerLosses > 0) ratio.innerText = playerWins / playerLosses; //if statement prevents a divide by 0
 		document.querySelector("#scoreTitle").innerText = "Cheater Score";
 		keysPressed = "";
 	}

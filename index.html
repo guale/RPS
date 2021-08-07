@@ -11,54 +11,50 @@
 		<script src="cpuMoves.js" async defer></script>
 	</head>
 	<body>
-		<!-- displays the player's score after each match -->
-		<header>
-			<h1 id = "scoreTitle">Player Score</h1>
-			<table>
-				<tr>
-					<th>Player Wins</th>
-					<th>Player Losses</th>
-					<th>Win:Loss Ratio</th>
-				</tr>
-				<tr>
-					<td id="win">0</td>
-					<td id="loss">0</td>
-					<td id="ratio">0</td>
-				</tr>
-			</table>
-		</header>
+		<div id="boundaryBox">
+			<!-- displays the player's score after each match -->
+			<header>
+				<h1 id="scoreTitle">Player Score</h1>
+				<table>
+					<tr>
+						<th>Player Wins</th>
+						<th>Player Losses</th>
+						<th>Win:Loss Ratio</th>
+					</tr>
+					<tr>
+						<td id="win">0</td>
+						<td id="loss">0</td>
+						<td id="ratio">0</td>
+					</tr>
+				</table>
+			</header>
 
-		<!-- shows which move the player and computer each made  -->
-		<div id="arena">
-			<div id="cpuSpace">
-				<p>Computer plays: <span id="cpuPlay"></span></p>
-				<img src="assets\images\blank.svg" />
+			<!-- shows which move the player and computer each made  -->
+			<div id="arena">
+				<div id="cpuSpace">
+					<p>
+						Computer plays: <br /><span id="cpuPlay"></span><br />
+					</p>
+					<img src="assets\images\blank.svg" />
+				</div>
+				<div id="line"></div>
+				<div id="playerSpace">
+					<img src="assets\images\blank.svg" />
+					<p>
+						Player plays: <br /><span id="playerPlay"></span><br />
+					</p>
+				</div>
 			</div>
-			<div id="line"></div>
-			<div id="playerSpace">
-				<img src="assets\images\blank.svg" />
-				<p>Player plays: <span id="playerPlay"></span></p>
-			</div>
-		</div>
 
-		<!-- has buttons for the player to chose their move -->
-		<div id="selectionBox">
-			<div class="selectionIMGs">
-				<div class="btnContainer">
-					<button type="button" id="selectRock" value="1">
-						<img src="assets\images\rock.svg" />
-					</button>
-				</div>
-				<div class="btnContainer">
-					<button type="button" id="selectPaper" value="0">
-						<img src="assets\images\paper.svg" />
-					</button>
-				</div>
-				<div class="btnContainer">
-					<button type="button" id="selectScissors" value="-1">
-						<img src="assets\images\scissors.svg" />
-					</button>
-				</div>
+			<!-- has buttons for the player to chose their move -->
+			<div id="selectionBox">
+				<input type="image" src="assets\images\rock.svg" value="1" />
+				<input type="image" src="assets\images\paper.svg" value="0" />
+				<input
+					type="image"
+					src="assets\images\scissors.svg"
+					value="-1"
+				/>
 			</div>
 		</div>
 	</body>

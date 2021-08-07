@@ -52,8 +52,6 @@ function display() {
 	win.innerText = playerWins;
 	loss.innerText = playerLosses;
 	if (playerLosses > 0) ratio.innerText = playerWins / playerLosses; //if statement prevents a divide by 0
-	console.log(`Player won: ${playerLastWin}\n` + 
-					`Draw: ${lastDraw}`);
 }
 
 //determines the winner of the match by subracting the value of each input and comparing them to a table
