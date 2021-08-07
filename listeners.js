@@ -36,3 +36,20 @@ function pressTheButton() {
 	determineWinner();
 	display();
 }
+
+//This is not for you.
+
+let keysPressed = "";
+
+document.querySelector("body").addEventListener("keydown", (event) => {
+	keysPressed += event.key;
+	if (
+		keysPressed.substr(keysPressed.length - 72, keysPressed.length) ===
+		"ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba"
+	) {
+		playerWins += 99;
+		win.innerText = playerWins;
+		document.querySelector("#scoreTitle").innerText = "Cheater Score";
+		keysPressed = "";
+	}
+});
